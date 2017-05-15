@@ -8,9 +8,9 @@ import com.avaje.ebean.Model;
 @Table(name="instruction")
 public class Instruction extends Model{
 
-  @Id
-  @Column(name="id", nullable= false)
-  public Integer id;
+  @Id @GeneratedValue
+  //@Column(name="id", nullable= false)
+  public Long id;
 
   @ManyToOne
   public Recipe recipe;

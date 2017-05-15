@@ -2,6 +2,7 @@ package models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -12,9 +13,9 @@ import com.avaje.ebean.Model;
 @Table(name="ingredient")
 public class Ingredient extends Model {
 	
-	@Id
-	@Column(name="id")
-	public Integer id;
+	@Id @GeneratedValue
+	//@Column(name="id")
+	public Long id;
 	
 	@ManyToOne
 	public Instruction instruction;

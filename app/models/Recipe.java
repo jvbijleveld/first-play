@@ -11,9 +11,9 @@ import com.avaje.ebean.Model;
 @Table(name = "recipe")
 public class Recipe extends Model{
   
-  @Id
-  @Column(name="id", nullable= false)
-  public Integer id;
+  @Id @GeneratedValue
+  //@Column(name="id", nullable= false)
+  public Long id;
   
   @Column(name="name", nullable= false)
   public String name;
