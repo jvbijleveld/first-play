@@ -24,4 +24,7 @@ public class Recipe extends Model{
   @Column(name="owner", length=255)
   private String owner;
   
+  @OneToMany
+  public Instruction instructions;
+  
 }

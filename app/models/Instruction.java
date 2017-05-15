@@ -9,7 +9,6 @@ import com.avaje.ebean.Model;
 public class Instruction extends Model{
 
   @Id
-  //@GeneratedValue(strategy = GenerationType.SEQUENCE)
   @Column(name="id", nullable= false)
   public Integer id;
 
@@ -19,4 +18,7 @@ public class Instruction extends Model{
   @Column(name="instruction", nullable=false)
   public String instruction;
 
+  @OneToMany
+  public Ingredient ingredient;
+  
 }
