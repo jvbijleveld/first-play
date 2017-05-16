@@ -3,6 +3,7 @@ package models;
 import javax.persistence.*;
 
 import com.avaje.ebean.Model;
+import entities.CoursesEnum;
 
 /**
  * Recipe entity managed by Ebean
@@ -23,6 +24,9 @@ public class Recipe extends Model{
 
   @Column(name="owner", length=255)
   private String owner;
+  
+  @Column(name="course")
+  private CoursesEnum course;
   
   @OneToMany
   public Instruction instructions;

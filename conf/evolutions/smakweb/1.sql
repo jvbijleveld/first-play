@@ -23,6 +23,8 @@ create table recipe (
   name                          varchar(255) not null,
   description                   varchar(255),
   owner                         varchar(255),
+  course                        integer,
+  constraint ck_recipe_course check (course in (0,1,2,3,4)),
   constraint pk_recipe primary key (id)
 );
 
